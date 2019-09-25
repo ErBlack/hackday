@@ -1,10 +1,12 @@
 <script>
     import Timer from './Timer.svelte';
-	  import Hello from './Hello.svelte';
-		import Typewriter from './Typewriter.svelte';
-	  import Links from './Links.svelte';
+	import Hello from './Hello.svelte';
+	import Typewriter from './Typewriter.svelte';
+	import Links from './Links.svelte';
+	import Twitter from './Twitter.svelte';
+	import Copyright from './Copyright.svelte';
 	
-		const start = new Date('2019-10-12T11:00:00.000Z');
+	const start = new Date('2019-10-12T11:00:00.000Z');
 </script>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap&subset=cyrillic" rel="stylesheet">
 <style>
@@ -25,8 +27,10 @@
 	overflow: hidden;
 	min-width: 400px;
 	min-height: 100%;
+	padding-bottom: 2em;
 	}
 	.address {
+		line-height: 1em;
 		font-size: .75em;
 	}
 </style>
@@ -49,4 +53,6 @@
 	<br/>
 	<br/>
 	<Links/>
+	<Twitter/>
+	<Copyright/>
 </div>

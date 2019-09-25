@@ -24,16 +24,19 @@
 	}
 	
 	.icon {
-		display: inline-block;
-    transform: translateY(-.11em);
+		display: block;
 		opacity: 0;
 		animation-fill-mode: forwards;
+		margin-right: .3em;
 	}
 	
 	.row {
 		width: 20em;
 		overflow: hidden;
 		white-space: nowrap;
+		display: flex;
+		line-height: 1.8em;
+    	align-items: center;
 	}
 	
 	.row:nth-child(1) .icon {
