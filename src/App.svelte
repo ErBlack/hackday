@@ -21,21 +21,31 @@
 		border-left-color: #080808;
 		border-right-color: #080808;
 		border-top-color: #020202;
-    text-shadow: 0 0.1em 0rem rgba(0,0,0,0.4), 0 0 2em rgba(0,0,0,0.8);
+	text-shadow: 0 0.1em 0rem rgba(0,0,0,0.4), 0 0 2em rgba(0,0,0,0.8);
+	overflow: hidden;
+	min-width: 400px;
+	min-height: 100%;
+	}
+	.address {
+		font-size: .75em;
 	}
 </style>
 <div>
 	<Hello/>
-	<Typewriter>Приглашаю на день рождения {start.toLocaleString().slice(0, -3)}</Typewriter>
+	<Typewriter>Приглашаю на день рождения</Typewriter>
 	<br/>
-	<Typewriter>
-		<Timer start={start}/>
-	</Typewriter>
+	<Typewriter>{start.toLocaleString().slice(0, -3)}</Typewriter>
+	<br/>
+	<Typewriter>Приходите через</Typewriter>
+	<br/>
+	<Typewriter><Timer start={start}/></Typewriter>
 	<br/>
 	<br/>
 	<Typewriter>Проспект Александровской Фермы 8</Typewriter>
 	<br/>
-	<Typewriter>7 парадная, 22 этаж, Квартира 1268</Typewriter>
+	<div class="address">
+		<Typewriter>7 парадная, 22 этаж, Квартира 1268</Typewriter>
+	</div>
 	<br/>
 	<br/>
 	<Links/>

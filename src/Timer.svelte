@@ -59,18 +59,18 @@
 
 
 		if (direction === 1) {
-			const result = ['@8E>48B5 G5@57'];
+			const result = [];
 
 			if (weeks) {
-				result.push(weeks + ' ' + plural(weeks, ['=545;N', '=545;8', '=545;L']));
+				result.push(weeks + ' ' + plural(weeks, ['неделю', 'недели', 'недель']));
 			}
 			if (days) {
-				result.push(days + ' ' + plural(days, ['45=L', '4=O', '4=59']));
+				result.push(days + ' ' + plural(days, ['день', 'дня', 'дней']));
 			}
 
-			return `${result.join(' ')} ${d2(hours)}G ${d2(minutes)}< ${d2(seconds)}A`;
+			return `${result.join(' ')} ${d2(hours)}ч ${d2(minutes)}м ${d2(seconds)}с`;
 		} else {
-			return '@5<5=8 =5 >AB0;>AL';
+			return 'Времени не осталось';
 		}
 	}
 </script>
