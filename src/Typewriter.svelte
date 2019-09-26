@@ -4,12 +4,13 @@
 		width: 0;
 		overflow: hidden;
 		white-space: nowrap;
-		animation: type steps(35) 2s 3s forwards;
+		animation: type steps(30) 2s 3s forwards;
+		flex-shrink: 0;
 	}
 	
 	@keyframes type {
 		0% {width: 0em;}
-		100% {width: 21em;}
+		100% {width: 18em;}
 	}
 </style>
 

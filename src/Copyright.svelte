@@ -3,13 +3,12 @@
 </script>
 <style>
 	span {
+		display: block;
 		color: inherit;
-		position: absolute;
-		bottom: .2em;
-		right: .5em;
-		width: 3em;
 		overflow: hidden;
 		opacity: .7;
+		width: 3em;
+		margin-right: -1.6em;
 	}
 </style>
 <span>

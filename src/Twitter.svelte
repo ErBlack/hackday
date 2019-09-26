@@ -3,11 +3,12 @@
 </script>
 <style>
 	a {
+		display: block;
+		overflow: hidden;
 		color: inherit;
-		position: absolute;
-		left: .5em;
-		bottom: .2em;
 		opacity: .7;
+		width: 4.8em;
+		margin-left: -1.6em;
 	}
 </style>
 <a href="https://twitter.com/ErBlack">

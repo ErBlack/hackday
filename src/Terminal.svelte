@@ -30,6 +30,11 @@ function onSubmit(e) {
 </script>
 
 <style>
+.terminal {
+    flex-grow: 1;
+    margin-bottom: 3em;
+}
+
 input {
     background: transparent;
     border: none;
@@ -43,16 +48,21 @@ input {
 form.readonly {
     opacity: 0;
 }
-</style>
 
-{#each bash_history as {command, result}}
-    <div class="row">> {command}</div>
-    {#await result}> <Await/>{:then message}
-        <div class="row">{message}</div>
-    {:catch error}
-        <div class="row row_error">{error.message}</div>
-    {/await}
-{/each}
-<form class={readonly ? 'readonly' : ''} on:submit={onSubmit} {readonly}>
-> <input name="command" {readonly}>
-</form>
+.row {
+    white-space: pre-wrap;
+}
+</style>
+<section class="terminal">
+    {#each bash_history as {command, result}}
+        <div class="row">> {command}</div>
+        {#await result}> <Await/>{:then message}
+            <div class="row">{message}</div>
+        {:catch error}
+            <div class="row row_error">{error.message}</div>
+        {/await}
+    {/each}
+    <form class={readonly ? 'readonly' : ''} on:submit={onSubmit} {readonly}>
+    > <input name="command" {readonly}>
+    </form>
+</section>
