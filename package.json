@@ -20,10 +20,10 @@
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
-    "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev",
+    "start": "sirv . --single",
+    "start:dev": "sirv . --single --dev",
     "postversion": "npm run build && npm run publish && git push && git push --tags",
-    "publish": "ghpages -p public/"
+    "publish": "ghpages -p hackday/"
   },
   "repository": {
     "type": "git",

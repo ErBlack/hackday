@@ -5,6 +5,7 @@
 	import Links from './Links.svelte';
 	import Twitter from './Twitter.svelte';
 	import Copyright from './Copyright.svelte';
+	import Terminal from './Terminal.svelte';
 	
 	const start = new Date('2019-10-12T11:00:00.000Z');
 </script>
@@ -53,6 +54,8 @@
 	<br/>
 	<br/>
 	<Links/>
+	<br/>
+	<Terminal/>
 	<Twitter/>
 	<Copyright/>
 </div>
