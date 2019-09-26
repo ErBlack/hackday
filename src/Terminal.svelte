@@ -12,11 +12,17 @@ function onSubmit(e) {
 
     if (value === '') return;
 
+    e.target.command.value = '';
+
+    if (value === 'clear') {
+        bash_history = [];
+        return;
+    }
+
     bash_history = bash_history.concat({
         command: value,
         result: command.exec(value)
     });
-    e.target.command.value = '';
 }
 </script>
 
