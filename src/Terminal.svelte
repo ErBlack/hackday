@@ -1,9 +1,11 @@
 <script>
 import Command from './Command.js';
+import Await from './Await.svelte';
 
 const command = new Command();
 
 let bash_history = [];
+let readonly = false;
 
 function onSubmit(e) {
     e.preventDefault();
@@ -19,9 +21,10 @@ function onSubmit(e) {
         return;
     }
 
+    readonly = true;
     bash_history = bash_history.concat({
         command: value,
-        result: command.exec(value)
+        result: command.exec(value).finally(() => readonly = false)
     });
 }
 </script>
@@ -36,12 +39,20 @@ input {
     margin: 0;
     padding: 0;
 }
+
+form.readonly {
+    opacity: 0;
+}
 </style>
 
 {#each bash_history as {command, result}}
     <div class="row">> {command}</div>
-    <div class="row">{result}</div>
+    {#await result}> <Await/>{:then message}
+        <div class="row">{message}</div>
+    {:catch error}
+        <div class="row row_error">{error.message}</div>
+    {/await}
 {/each}
-<form on:submit={onSubmit}>
-> <input name="command">
+<form class={readonly ? 'readonly' : ''} on:submit={onSubmit} {readonly}>
+> <input name="command" {readonly}>
 </form>
