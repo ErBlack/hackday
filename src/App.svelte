@@ -6,7 +6,20 @@
 	import Twitter from './Twitter.svelte';
 	import Copyright from './Copyright.svelte';
 	import Terminal from './Terminal.svelte';
+	import { onMount } from 'svelte';
 	
+	let ribbon;
+
+	onMount(() => {
+		ribbon = document.querySelector('.ribbon');
+	});
+
+	function onExec() {
+		if (ribbon) {
+			setTimeout(() => ribbon.scrollTop = ribbon.scrollHeight, 0)
+		}
+	}
+
 	const start = new Date('2019-10-12T11:00:00.000Z');
 </script>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap&subset=cyrillic" rel="stylesheet">
@@ -65,7 +78,7 @@
 	<br/>
 	<Links/>
 	<br/>
-	<Terminal/>
+	<Terminal on:exec={onExec}/>
 	<footer>
 		<Twitter/>
 		<Copyright/>

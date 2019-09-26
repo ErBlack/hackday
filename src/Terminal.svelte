@@ -2,6 +2,14 @@
 import Command from './Command.js';
 import Await from './Await.svelte';
 
+import { createEventDispatcher } from 'svelte';
+
+const dispatch = createEventDispatcher();
+
+function execDone() {
+    dispatch('exec');
+}
+
 const command = new Command();
 
 let bash_history = [];
@@ -24,7 +32,10 @@ function onSubmit(e) {
     readonly = true;
     bash_history = bash_history.concat({
         command: value,
-        result: command.exec(value).finally(() => readonly = false)
+        result: command.exec(value).finally(() => {
+            readonly = false;
+            execDone();
+        })
     });
 }
 </script>
