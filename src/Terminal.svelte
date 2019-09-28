@@ -56,6 +56,10 @@ input {
     padding: 0;
 }
 
+form {
+    display: none;
+}
+
 form.readonly {
     opacity: 0;
 }
