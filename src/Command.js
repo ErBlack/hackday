@@ -6,6 +6,7 @@ import {
     checkFile
 } from './commands/fs';
 import read from './commands/read';
+import scan from './commands/scan';
 
 import random from './random';
 
@@ -27,6 +28,8 @@ export default class Command {
                 return now(pwd());
             case 'cd':
                 return cd(...args);
+            case 'scan':
+                return delay(scan(), random(500, 2000));
             case 'read':
                 if (!args.length) {
                     return now();

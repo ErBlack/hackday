@@ -12,6 +12,10 @@ const currentDir = [
 
 const row = '                                          ';
 
+export function toRow(a, b) {
+    return `${a}${row.slice(a.length + b.length)}${b}`
+}
+
 function findCurrentDir() {
     return currentDir.reduce((dir, name) => dir[name].contents, structure);
 }
@@ -34,8 +38,7 @@ export function ls() {
                 case 'directory':
                     return `${name}/`;
                 case 'file':
-                    const size = formatSize(dir[name].size);
-                    return `${name}${row.slice(name.length + size.length)}${size}`;
+                    return toRow(name, formatSize(dir[name].size));
                 default:
                     return '***'
             }
