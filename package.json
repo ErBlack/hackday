@@ -1,7 +1,7 @@
 {
   "name": "hackday",
   "private": true,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "devDependencies": {
     "ghpages": "0.0.10",
     "md5": "^2.2.1",
