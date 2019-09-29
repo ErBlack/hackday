@@ -1,7 +1,10 @@
+const ERROR_INVALID_IP = (ip) => `ssh: ${ip}: Invalid ip adress, use scan to find`;
 const ERROR_UNKNOWN_HOST = (ip) => `ssh: connect to host ${ip}: Cannot assign requested address`;
 const ERROR_LOCAL_HOST = (ip) => `ssh: connect to host ${ip}: Connection refused`;
 const ERROR_WRONG_PASSWORD = 'ssh: incorrect password';
-const ERROR_KEY_NEEDED = 'ssh: rsa key needed'
+const ERROR_KEY_NEEDED = 'ssh: rsa key needed';
+
+const IP_REG = /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/;
 
 import md5 from 'md5';
 
@@ -16,6 +19,8 @@ import {
 } from './fs/mashine';
 
 export default function ssh(ip) {
+    if (!IP_REG.test(ip)) return ERROR_INVALID_IP(ip);
+
     const target = findByIp(ip);
 
     if (!target) return ERROR_UNKNOWN_HOST(ip);
