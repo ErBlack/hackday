@@ -1,4 +1,6 @@
-let current = '*Me';
+export const defaultMashine = '*Me';
+
+let current = defaultMashine;
 
 import {
     hacker,

@@ -9,6 +9,7 @@ import read from './commands/read';
 import scan from './commands/scan';
 import ssh from './commands/ssh';
 import sshAdd from './commands/ssh-add';
+import logout from './commands/logout';
 
 import random from './random';
 
@@ -48,6 +49,8 @@ export default class Command {
                         return now(sshAdd(...args));
                     }
                 }
+            case 'logout':
+                return delay(logout(), 200);
             case 'read':
                 if (!args.length) {
                     return now();
