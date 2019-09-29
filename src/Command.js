@@ -51,6 +51,7 @@ export default class Command {
                 }
             case 'logout':
                 return delay(logout(), 200);
+            case 'cat':
             case 'read':
                 if (!args.length) {
                     return now();
