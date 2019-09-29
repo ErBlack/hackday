@@ -54,6 +54,7 @@ input {
     outline: none;
     margin: 0;
     padding: 0;
+    width: calc(100% - 1.2em);
 }
 
 form.readonly {
