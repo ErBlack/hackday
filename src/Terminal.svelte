@@ -72,12 +72,14 @@ form.readonly {
     {#each bash_history as {command, result}}
         <div class="row">> {command}</div>
         {#await result}> <Await/>{:then message}
+            {#if message}
             <div class="row">{message}</div>
+            {/if}
         {:catch error}
             <div class="row row_error">{error.message}</div>
         {/await}
     {/each}
-    <form class={readonly ? 'readonly' : ''} on:submit={onSubmit} {readonly}>
+    <form class={readonly ? 'readonly' : ''} on:submit={onSubmit}>
     > <input name="command" {readonly}>
     </form>
 </section>

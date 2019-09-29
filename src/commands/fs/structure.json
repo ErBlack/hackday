@@ -1,0 +1,852 @@
+{
+    "bin": {
+        "type": "directory",
+        "size": 512,
+        "contents": {
+            "bash": {
+                "type": "file",
+                "size": 1113504
+            },
+            "btrfs": {
+                "type": "file",
+                "size": 716464
+            },
+            "btrfs-debug-tree": {
+                "type": "file",
+                "size": 375952
+            },
+            "btrfs-find-root": {
+                "type": "file",
+                "size": 371856
+            },
+            "btrfs-image": {
+                "type": "file",
+                "size": 396432
+            },
+            "btrfs-map-logical": {
+                "type": "file",
+                "size": 375952
+            },
+            "btrfs-select-super": {
+                "type": "file",
+                "size": 371856
+            },
+            "btrfs-zero-log": {
+                "type": "file",
+                "size": 371856
+            },
+            "btrfstune": {
+                "type": "file",
+                "size": 375952
+            },
+            "bunzip2": {
+                "type": "file",
+                "size": 34888
+            },
+            "busybox": {
+                "type": "file",
+                "size": 2062296
+            },
+            "bzcat": {
+                "type": "file",
+                "size": 34888
+            },
+            "bzdiff": {
+                "type": "file",
+                "size": 2140
+            },
+            "bzexe": {
+                "type": "file",
+                "size": 4877
+            },
+            "bzgrep": {
+                "type": "file",
+                "size": 3642
+            }
+        }
+    },
+    "boot": {
+        "type": "directory",
+        "size": 512,
+        "contents": {}
+    },
+    "dev": {
+        "type": "directory",
+        "size": 512,
+        "contents": {
+            "block": {
+                "type": "directory",
+                "size": 512,
+                "contents": {}
+            },
+            "pts": {
+                "type": "directory",
+                "size": 0,
+                "contents": {}
+            }
+        }
+    },
+    "etc": {
+        "type": "directory",
+        "size": 512,
+        "contents": {
+            "NetworkManager": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "dispatcher.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    }
+                }
+            },
+            "X11": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "Xsession.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "xkb": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    }
+                }
+            },
+            "acpi": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "events": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    }
+                }
+            },
+            "alternatives": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "README": {
+                        "type": "file",
+                        "size": 100
+                    }
+                }
+            },
+            "apm": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "event.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    }
+                }
+            },
+            "apparmor": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "init": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "parser.conf": {
+                        "type": "file",
+                        "size": 1475
+                    },
+                    "subdomain.conf": {
+                        "type": "file",
+                        "size": 1962
+                    }
+                }
+            },
+            "apparmor.d": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "abstractions": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "cache": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "disable": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "force-complain": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "local": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "lxc": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "tunables": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "lxc-containers": {
+                        "type": "file",
+                        "size": 198
+                    },
+                    "sbin.dhclient": {
+                        "type": "file",
+                        "size": 3194
+                    },
+                    "usr.bin.lxc-start": {
+                        "type": "file",
+                        "size": 125
+                    },
+                    "usr.bin.man": {
+                        "type": "file",
+                        "size": 2857
+                    },
+                    "usr.lib.snapd.snap-confine.real": {
+                        "type": "file",
+                        "size": 23754
+                    },
+                    "usr.sbin.rsyslogd": {
+                        "type": "file",
+                        "size": 1550
+                    },
+                    "usr.sbin.tcpdump": {
+                        "type": "file",
+                        "size": 1353
+                    }
+                }
+            },
+            "apport": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "blacklist.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "crashdb.conf": {
+                        "type": "file",
+                        "size": 1216
+                    }
+                }
+            },
+            "apt": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "apt.conf.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "auth.conf.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "preferences.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "sources.list.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "trusted.gpg.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "sources.list": {
+                        "type": "file",
+                        "size": 2765
+                    },
+                    "trusted.gpg": {
+                        "type": "file",
+                        "size": 2206
+                    }
+                }
+            },
+            "bash_completion.d": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "apport_completion": {
+                        "type": "file",
+                        "size": 6636
+                    },
+                    "cloud-init": {
+                        "type": "file",
+                        "size": 3327
+                    },
+                    "git-prompt": {
+                        "type": "file",
+                        "size": 439
+                    }
+                }
+            },
+            ".pwd.lock": {
+                "type": "file",
+                "size": 0
+            },
+            "adduser.conf": {
+                "type": "file",
+                "size": 3028
+            },
+            "at.deny": {
+                "type": "file",
+                "size": 144
+            },
+            "bash.bashrc": {
+                "type": "file",
+                "size": 2319
+            },
+            "bash_completion": {
+                "type": "file",
+                "size": 45
+            }
+        }
+    },
+    "home": {
+        "type": "directory",
+        "size": 512,
+        "contents": {
+            "user": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    ".bash_history": {
+                        "type": "file",
+                        "size": 201
+                    },
+                    ".bash_logout": {
+                        "type": "file",
+                        "size": 220
+                    },
+                    ".bashrc": {
+                        "type": "file",
+                        "size": 3771
+                    },
+                    ".profile": {
+                        "type": "file",
+                        "size": 807
+                    }
+                }
+            }
+        }
+    },
+    "junk": {
+        "type": "directory",
+        "contents": []
+    },
+    "lib": {
+        "type": "directory",
+        "size": 512,
+        "contents": {
+            "apparmor": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "functions": {
+                        "type": "file",
+                        "size": 7486
+                    },
+                    "profile-load": {
+                        "type": "file",
+                        "size": 1946
+                    }
+                }
+            },
+            "console-setup": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "console-setup.sh": {
+                        "type": "file",
+                        "size": 920
+                    },
+                    "keyboard-setup.sh": {
+                        "type": "file",
+                        "size": 390
+                    }
+                }
+            },
+            "cryptsetup": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "checks": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "scripts": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "askpass": {
+                        "type": "file",
+                        "size": 14504
+                    },
+                    "cryptdisks.functions": {
+                        "type": "file",
+                        "size": 19177
+                    }
+                }
+            },
+            "ebtables": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "libebt_802_3.so": {
+                        "type": "file",
+                        "size": 10032
+                    },
+                    "libebt_among.so": {
+                        "type": "file",
+                        "size": 14392
+                    },
+                    "libebt_arp.so": {
+                        "type": "file",
+                        "size": 14496
+                    },
+                    "libebt_arpreply.so": {
+                        "type": "file",
+                        "size": 10104
+                    },
+                    "libebt_ip.so": {
+                        "type": "file",
+                        "size": 10384
+                    },
+                    "libebt_ip6.so": {
+                        "type": "file",
+                        "size": 14208
+                    },
+                    "libebt_limit.so": {
+                        "type": "file",
+                        "size": 10144
+                    },
+                    "libebt_log.so": {
+                        "type": "file",
+                        "size": 10272
+                    },
+                    "libebt_mark.so": {
+                        "type": "file",
+                        "size": 10232
+                    },
+                    "libebt_mark_m.so": {
+                        "type": "file",
+                        "size": 5904
+                    },
+                    "libebt_nat.so": {
+                        "type": "file",
+                        "size": 10424
+                    },
+                    "libebt_nflog.so": {
+                        "type": "file",
+                        "size": 10160
+                    },
+                    "libebt_pkttype.so": {
+                        "type": "file",
+                        "size": 10064
+                    },
+                    "libebt_redirect.so": {
+                        "type": "file",
+                        "size": 5904
+                    },
+                    "libebt_standard.so": {
+                        "type": "file",
+                        "size": 5808
+                    }
+                }
+            },
+            "hdparm": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "hdparm-functions": {
+                        "type": "file",
+                        "size": 9523
+                    }
+                }
+            },
+            "init": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "init-d-script": {
+                        "type": "file",
+                        "size": 5643
+                    },
+                    "vars.sh": {
+                        "type": "file",
+                        "size": 1212
+                    }
+                }
+            },
+            "lsb": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "init-functions.d": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "init-functions": {
+                        "type": "file",
+                        "size": 11510
+                    }
+                }
+            },
+            "modprobe.d": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "aliases.conf": {
+                        "type": "file",
+                        "size": 655
+                    },
+                    "fbdev-blacklist.conf": {
+                        "type": "file",
+                        "size": 390
+                    },
+                    "systemd.conf": {
+                        "type": "file",
+                        "size": 765
+                    }
+                }
+            },
+            "modules": {
+                "type": "directory",
+                "size": 512,
+                "contents": {}
+            },
+            "modules-load.d": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "open-iscsi.conf": {
+                        "type": "file",
+                        "size": 18
+                    }
+                }
+            },
+            "netplan": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "generate": {
+                        "type": "file",
+                        "size": 92536
+                    }
+                }
+            },
+            "open-iscsi": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "activate-storage.sh": {
+                        "type": "file",
+                        "size": 2657
+                    },
+                    "logout-all.sh": {
+                        "type": "file",
+                        "size": 1771
+                    },
+                    "net-interface-handler": {
+                        "type": "file",
+                        "size": 2776
+                    },
+                    "startup-checks.sh": {
+                        "type": "file",
+                        "size": 1933
+                    },
+                    "umountiscsi.sh": {
+                        "type": "file",
+                        "size": 20646
+                    }
+                }
+            },
+            "recovery-mode": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "options": {
+                        "type": "directory",
+                        "size": 512,
+                        "contents": {}
+                    },
+                    "l10n.sh": {
+                        "type": "file",
+                        "size": 1126
+                    },
+                    "recovery-menu": {
+                        "type": "file",
+                        "size": 3536
+                    }
+                }
+            },
+            "klibc-wBFLvVtxy4xJqEadIBJMa78iJz8.so": {
+                "type": "file",
+                "size": 74656
+            },
+            "libhandle.so.1.0.3": {
+                "type": "file",
+                "size": 14416
+            }
+        }
+    },
+    "lib64": {
+        "type": "directory",
+        "size": 512,
+        "contents": {}
+    },
+    "media": {
+        "type": "directory",
+        "size": 512,
+        "contents": {}
+    },
+    "mnt": {
+        "type": "directory",
+        "size": 512,
+        "contents": {}
+    },
+    "opt": {
+        "type": "directory",
+        "size": 512,
+        "contents": {}
+    },
+    "proc": {
+        "type": "directory",
+        "size": 0,
+        "contents": {
+            "bus": {
+                "type": "directory",
+                "size": 0,
+                "contents": {}
+            },
+            "sys": {
+                "type": "directory",
+                "size": 0,
+                "contents": {
+                    "fs": {
+                        "type": "directory",
+                        "size": 0,
+                        "contents": {}
+                    },
+                    "kernel": {
+                        "type": "directory",
+                        "size": 0,
+                        "contents": {}
+                    },
+                    "net": {
+                        "type": "directory",
+                        "size": 0,
+                        "contents": {}
+                    },
+                    "vm": {
+                        "type": "directory",
+                        "size": 0,
+                        "contents": {}
+                    }
+                }
+            },
+            "tty": {
+                "type": "directory",
+                "size": 0,
+                "contents": {}
+            },
+            "cgroups": {
+                "type": "file",
+                "size": 0
+            },
+            "cmdline": {
+                "type": "file",
+                "size": 0
+            },
+            "cpuinfo": {
+                "type": "file",
+                "size": 0
+            },
+            "filesystems": {
+                "type": "file",
+                "size": 0
+            },
+            "interrupts": {
+                "type": "file",
+                "size": 0
+            },
+            "loadavg": {
+                "type": "file",
+                "size": 0
+            },
+            "meminfo": {
+                "type": "file",
+                "size": 0
+            },
+            "stat": {
+                "type": "file",
+                "size": 0
+            },
+            "uptime": {
+                "type": "file",
+                "size": 0
+            },
+            "version": {
+                "type": "file",
+                "size": 0
+            },
+            "version_signature": {
+                "type": "file",
+                "size": 0
+            }
+        }
+    },
+    "root": {
+        "type": "directory",
+        "size": 512,
+        "contents": {}
+    },
+    "run": {
+        "type": "directory",
+        "size": 512,
+        "contents": {
+            "lock": {
+                "type": "directory",
+                "size": 512,
+                "contents": {}
+            },
+            "mount": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "utab": {
+                        "type": "file",
+                        "size": 0
+                    }
+                }
+            },
+            "resolvconf": {
+                "type": "directory",
+                "size": 512,
+                "contents": {
+                    "resolv.conf": {
+                        "type": "file",
+                        "size": 188
+                    }
+                }
+            },
+            "shm": {
+                "type": "directory",
+                "size": 512,
+                "contents": {}
+            },
+            "sudo": {
+                "type": "directory",
+                "size": 512,
+                "contents": {}
+            },
+            "user": {
+                "type": "directory",
+                "size": 512,
+                "contents": {}
+            }
+        }
+    },
+    "sbin": {
+        "type": "directory",
+        "size": 512,
+        "contents": {
+            "acpi_available": {
+                "type": "file",
+                "size": 112
+            },
+            "agetty": {
+                "type": "file",
+                "size": 56552
+            },
+            "apm_available": {
+                "type": "file",
+                "size": 81
+            },
+            "apparmor_parser": {
+                "type": "file",
+                "size": 1472232
+            },
+            "badblocks": {
+                "type": "file",
+                "size": 26632
+            },
+            "blkdeactivate": {
+                "type": "file",
+                "size": 14840
+            },
+            "blkdiscard": {
+                "type": "file",
+                "size": 26704
+            },
+            "blkid": {
+                "type": "file",
+                "size": 88176
+            },
+            "blockdev": {
+                "type": "file",
+                "size": 38984
+            },
+            "bridge": {
+                "type": "file",
+                "size": 88224
+            },
+            "capsh": {
+                "type": "file",
+                "size": 18424
+            },
+            "cfdisk": {
+                "type": "file",
+                "size": 96704
+            },
+            "cgdisk": {
+                "type": "file",
+                "size": 186544
+            },
+            "chcpu": {
+                "type": "file",
+                "size": 22600
+            },
+            "cryptdisks_start": {
+                "type": "file",
+                "size": 1135
+            }
+        }
+    },
+    "init": {
+        "type": "file",
+        "size": 591344
+    }
+}
