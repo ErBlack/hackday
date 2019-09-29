@@ -46,6 +46,11 @@ function onSubmit(e) {
     margin-bottom: 3em;
 }
 
+form {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 input {
     background: transparent;
     border: none;
@@ -54,7 +59,7 @@ input {
     outline: none;
     margin: 0;
     padding: 0;
-    width: calc(100% - 1.2em);
+    flex-grow: 1;
 }
 
 form.readonly {
@@ -63,6 +68,17 @@ form.readonly {
 
 .row {
     white-space: pre-wrap;
+}
+
+.prompt {
+    opacity: 0;
+    margin-right: .6em;
+    transition: opacity .3s ease-out;
+    flex-shrink: 0;
+}
+
+input:focus + .prompt {
+    opacity: 1;
 }
 </style>
 <section class="terminal">
@@ -78,7 +94,8 @@ form.readonly {
         {/await}
     {/each}
     <form class={readonly ? 'readonly' : ''} on:submit={onSubmit}>
-    > <input name="command" {readonly}>
+        <input name="command" {readonly}>
+        <span class="prompt">></span>
     </form>
     {/if}
 </section>
