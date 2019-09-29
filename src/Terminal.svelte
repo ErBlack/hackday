@@ -65,6 +65,7 @@ form.readonly {
 }
 </style>
 <section class="terminal">
+    {#if window.location.search === '?beta'}
     {#each bash_history as {command, result}}
         <div class="row">> {command}</div>
         {#await result}> <Await/>{:then message}
@@ -78,4 +79,5 @@ form.readonly {
     <form class={readonly ? 'readonly' : ''} on:submit={onSubmit}>
     > <input name="command" {readonly}>
     </form>
+    {/if}
 </section>
