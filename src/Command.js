@@ -21,7 +21,7 @@ export default class Command {
     exec(input, history) {
         const [command, ...args] = input.replace(/\s+/g, ' ').trim().split(' ');
 
-        switch (command) {
+        switch (command.toLowerCase()) {
             case 'help':
                 return now(help(...args));
             case 'ls':
