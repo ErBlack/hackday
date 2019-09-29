@@ -32,7 +32,7 @@ function onSubmit(e) {
     readonly = true;
     bash_history = bash_history.concat({
         command: value,
-        result: command.exec(value).finally(() => {
+        result: command.exec(value, bash_history).finally(() => {
             readonly = false;
             execDone();
         })
@@ -56,10 +56,6 @@ input {
     padding: 0;
 }
 
-form {
-    display: none;
-}
-
 form.readonly {
     opacity: 0;
 }
@@ -73,7 +69,7 @@ form.readonly {
         <div class="row">> {command}</div>
         {#await result}> <Await/>{:then message}
             {#if message}
-            <div class="row">{message}</div>
+                <div class="row">{message}</div>
             {/if}
         {:catch error}
             <div class="row row_error">{error.message}</div>

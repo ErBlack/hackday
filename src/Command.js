@@ -15,7 +15,7 @@ const now = (m) => Promise.resolve(m);
 const delay = (m, d) => new Promise((resolve) => setTimeout(() => resolve(m), d));
 
 export default class Command {
-    exec(input) {
+    exec(input, history) {
         const [command, ...args] = input.split(' ');
 
         switch (command) {
@@ -36,7 +36,7 @@ export default class Command {
                     if (check) {
                         return now(check);
                     } else {
-                        return delay(read(...args), random(100, 200));
+                        return delay(read(args[0], history), random(100, 200));
                     }
                 }
             default:
