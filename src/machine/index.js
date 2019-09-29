@@ -1,6 +1,6 @@
-export const defaultMashine = '*Me';
+export const defaultMachine = '*Me';
 
-let current = defaultMashine;
+let current = defaultMachine;
 
 import {
     hacker,
@@ -9,8 +9,9 @@ import {
     gibson,
     common
 } from './structures';
+import {levelup} from '../ost';
 
-const mashines = {
+const machines = {
     '*Me': {
         dir: ['home', 'zerocool'],
         network: 'common',
@@ -27,7 +28,8 @@ const mashines = {
         need_ssh_key: false,
         ip: '198.41.10.124',
         password: 'e10adc3949ba59abbe56e057f20f883e',
-        structure: lauren
+        structure: lauren,
+        visited: false
     },
     plague: {
         dir: ['home', 'plague'],
@@ -36,7 +38,8 @@ const mashines = {
         need_ssh_key: false,
         ip: '199.27.91.131',
         password: '73bcaaa458bff0d27989ed331b68b64d',
-        structure: plague
+        structure: plague,
+        visited: false
     },
     EMC_gibson: {
         dir: ['home', 'root'],
@@ -44,7 +47,8 @@ const mashines = {
         access: ['common', 'emc'],
         need_ssh_key: true,
         ip: '192.15.45.241',
-        structure: gibson
+        structure: gibson,
+        visited: false
     },
     EMC_rucker: {
         dir: ['home', 'root'],
@@ -64,18 +68,18 @@ const mashines = {
     }
 }
 
-export const currentMashine = () => mashines[current];
-export const currentDir = () => currentMashine().dir;
-export const currentStructure = () => currentMashine().structure; 
+export const currentMachine = () => machines[current];
+export const currentDir = () => currentMachine().dir;
+export const currentStructure = () => currentMachine().structure; 
 
-export const getMashine = (name) => mashines[name];
+export const getMachine = (name) => machines[name];
 
 export const availableNetworks = () => {
-    const {access} = mashines[current];
+    const {access} = machines[current];
 
-    return Object.keys(mashines).reduce((list, name) => {
+    return Object.keys(machines).reduce((list, name) => {
         if (current !== name) {
-            const {network, ip} = mashines[name];
+            const {network, ip} = machines[name];
 
             if (access.includes(network)) {
                 list.push({name, ip});
@@ -87,7 +91,7 @@ export const availableNetworks = () => {
 }
 
 export function findByIp(ip) {
-    return Object.keys(mashines).filter((name) => mashines[name].ip === ip)[0];
+    return Object.keys(machines).filter((name) => machines[name].ip === ip)[0];
 }
 
 export function isCurrent(name) {
@@ -95,9 +99,14 @@ export function isCurrent(name) {
 }
 
 export function isAvailable(name) {
-    return mashines[current].access.includes(mashines[name].network);
+    return machines[current].access.includes(machines[name].network);
 }
 
 export function setCurrent(name) {
     current = name;
+
+    if (currentMachine().visited === false) {
+        currentMachine().visited === true;
+        levelup.play();
+    }
 }

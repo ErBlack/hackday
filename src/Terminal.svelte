@@ -4,6 +4,8 @@ import Await from './Await.svelte';
 
 import { createEventDispatcher } from 'svelte';
 
+import {start} from './ost.js';
+
 const dispatch = createEventDispatcher();
 
 function execDone() {
@@ -33,6 +35,7 @@ function onInput(e) {
         } else {
             e.target.value = '';
             unlocked = true;
+            start.play();
         }
     }
 }
@@ -101,7 +104,8 @@ form.readonly {
     flex-shrink: 0;
 }
 
-input:focus + .prompt {
+input:focus + .prompt,
+input:not(:placeholder-shown) + .prompt {
     opacity: 1;
 }
 </style>
@@ -118,7 +122,7 @@ input:focus + .prompt {
         {/await}
     {/each}
     <form class={readonly ? 'readonly' : ''} on:submit={onSubmit}>
-        <input name="command" on:input={onInput} {readonly}>
+        <input name="command" placeholder=" " on:input={onInput} {readonly}>
         <span class="prompt">></span>
     </form>
     {/if}

@@ -1,4 +1,4 @@
-import {availableNetworks} from './fs/mashine';
+import {availableNetworks} from '../machine';
 import {toRow} from './fs';
 
 export default function scan() {

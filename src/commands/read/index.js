@@ -1,5 +1,6 @@
 
 import bin from './bin.js';
+import {final} from '../../ost';
 
 const print = (content) => `
 ${content}
@@ -11,6 +12,9 @@ export default function read(name, bash_history) {
         return print(files[name]);
     } else if (name === '.bash_history') {
         return print(bash_history.map(({command}) => command).join('\n'));
+    } else if (name === 'garbage') {
+        final.play();
+        return print('cool');
     } else {
         return print(bin(name));
     }

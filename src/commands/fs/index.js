@@ -1,7 +1,7 @@
 import {
     currentDir,
     currentStructure
-} from './mashine';
+} from '../../machine';
 
 const ERROR_DIRECTORY_NOT_FOUND = (command) => `-bash: cd: ${command}: No such file or directory`;
 const ERROR_NOT_DIRECTORY = (command) => `-bash: cd: ${command}: Not a directory`;

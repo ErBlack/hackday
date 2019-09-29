@@ -1,10 +1,10 @@
 import {
-    defaultMashine,
+    defaultMachine,
     setCurrent
-} from './fs/mashine';
+} from '../machine';
 
 export default function logout() {
-    setCurrent(defaultMashine);
+    setCurrent(defaultMachine);
 
     return `
 Welcome home

@@ -14,9 +14,9 @@ import {
     findByIp,
     isCurrent,
     isAvailable,
-    getMashine,
+    getMachine,
     setCurrent
-} from './fs/mashine';
+} from '../machine';
 
 export default function ssh(ip) {
     if (!IP_REG.test(ip)) return ERROR_INVALID_IP(ip);
@@ -30,7 +30,7 @@ export default function ssh(ip) {
     const {
         password,
         need_ssh_key
-    } = getMashine(target);
+    } = getMachine(target);
 
     let auth;
 
