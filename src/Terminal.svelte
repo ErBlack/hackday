@@ -14,10 +14,34 @@ const command = new Command();
 
 let bash_history = [];
 let readonly = false;
+let unlocked = false;
+
+function onInput(e) {
+    if (unlocked) return;
+
+    const v = e.target.value;
+
+    {
+        if (v[0] !== 'h') {
+            e.target.value = '';
+        } else if (v[1] !== 'a') {
+            e.target.value = 'h';
+        } else if (v[2] !== 'c') {
+            e.target.value = 'ha';
+        } else if (v[3] !== 'k') {
+            e.target.value = 'hac';
+        } else {
+            e.target.value = '';
+            unlocked = true;
+        }
+    }
+}
 
 function onSubmit(e) {
     e.preventDefault();
 
+    if (!unlocked) return;
+    
     const value = e.target.command.value;
 
     if (value === '') return;
@@ -94,7 +118,7 @@ input:focus + .prompt {
         {/await}
     {/each}
     <form class={readonly ? 'readonly' : ''} on:submit={onSubmit}>
-        <input name="command" {readonly}>
+        <input name="command" on:input={onInput} {readonly}>
         <span class="prompt">></span>
     </form>
     {/if}
