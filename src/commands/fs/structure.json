@@ -334,30 +334,7 @@
     "home": {
         "type": "directory",
         "size": 512,
-        "contents": {
-            "user": {
-                "type": "directory",
-                "size": 512,
-                "contents": {
-                    ".bash_history": {
-                        "type": "file",
-                        "size": 201
-                    },
-                    ".bash_logout": {
-                        "type": "file",
-                        "size": 220
-                    },
-                    ".bashrc": {
-                        "type": "file",
-                        "size": 3771
-                    },
-                    ".profile": {
-                        "type": "file",
-                        "size": 807
-                    }
-                }
-            }
-        }
+        "contents": {}
     },
     "junk": {
         "type": "directory",

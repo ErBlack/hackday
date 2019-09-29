@@ -1,14 +1,12 @@
-import structure from './structure';
+import {
+    currentDir,
+    currentStructure
+} from './mashine';
 
 const ERROR_DIRECTORY_NOT_FOUND = (command) => `-bash: cd: ${command}: No such file or directory`;
 const ERROR_NOT_DIRECTORY = (command) => `-bash: cd: ${command}: Not a directory`;
 const ERROR_NO_FILE = (command) => `read: ${command}: No such file`;
 const ERROR_IS_DIRECTORY = (command) => `read: ${command}: Is a directory`;
-
-const currentDir = [
-    'home',
-    'user'
-];
 
 const row = '                                          ';
 
@@ -17,7 +15,7 @@ export function toRow(a, b) {
 }
 
 function findCurrentDir() {
-    return currentDir.reduce((dir, name) => dir[name].contents, structure);
+    return currentDir().reduce((dir, name) => dir[name].contents, currentStructure());
 }
 
 function formatSize(size) {
@@ -25,7 +23,7 @@ function formatSize(size) {
 }
 
 export function pwd() {
-    return currentDir.length ? `/${currentDir.join('/')}/` : '/';
+    return currentDir().length ? `/${currentDir().join('/')}/` : '/';
 }
 
 export function ls() {
@@ -53,7 +51,7 @@ export function cd(target) {
         case './':
             return Promise.resolve();
         case '../':
-            currentDir.pop();
+            currentDir().pop();
             return Promise.resolve();
         default:
             const dirTarget = findCurrentDir()[target];
@@ -64,7 +62,7 @@ export function cd(target) {
                 return Promise.resolve(ERROR_NOT_DIRECTORY(target));
             }
 
-            currentDir.push(target);
+            currentDir().push(target);
 
             return Promise.resolve();
     }
