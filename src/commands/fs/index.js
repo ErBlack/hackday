@@ -2,6 +2,8 @@ import structure from './structure';
 
 const ERROR_DIRECTORY_NOT_FOUND = (command) => `-bash: cd: ${command}: No such file or directory`;
 const ERROR_NOT_DIRECTORY = (command) => `-bash: cd: ${command}: Not a directory`;
+const ERROR_NO_FILE = (command) => `read: ${command}: No such file`;
+const ERROR_IS_DIRECTORY = (command) => `read: ${command}: Is a directory`;
 
 const currentDir = [
     'home',
@@ -62,5 +64,15 @@ export function cd(target) {
             currentDir.push(target);
 
             return Promise.resolve();
+    }
+}
+
+export function checkFile(name) {
+    const file = findCurrentDir()[name];
+
+    if (!file) {
+        return ERROR_NO_FILE(name);
+    } else if (file.type === 'directory') {
+        return ERROR_IS_DIRECTORY(name);
     }
 }

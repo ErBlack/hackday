@@ -2,8 +2,12 @@ import help from './commands/help';
 import {
     pwd,
     ls,
-    cd
+    cd,
+    checkFile
 } from './commands/fs';
+import read from './commands/read';
+
+import random from './random';
 
 const ERROR_COMMAND_NOT_FOUND = (command) => `-bash: ${command}: command not found`;
 
@@ -23,6 +27,18 @@ export default class Command {
                 return now(pwd());
             case 'cd':
                 return cd(...args);
+            case 'read':
+                if (!args.length) {
+                    return now();
+                } else {
+                    const check = checkFile(...args);
+
+                    if (check) {
+                        return now(check);
+                    } else {
+                        return delay(read(...args), random(100, 200));
+                    }
+                }
             default:
                 return now(ERROR_COMMAND_NOT_FOUND(command));
         }
