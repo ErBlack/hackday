@@ -115,7 +115,7 @@ input:not(:placeholder-shown) + .prompt {
         <div class="row">> {command}</div>
         {#await result}> <Await/>{:then message}
             {#if message}
-                <div class="row">{message}</div>
+                <div class="row">{@html message}</div>
             {/if}
         {:catch error}
             <div class="row row_error">{error.message}</div>

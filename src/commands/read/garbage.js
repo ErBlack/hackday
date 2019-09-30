@@ -13,8 +13,13 @@ export default function garbage() {
 ${code()}
 
 Пришли его мне.
+
+<img src="${h.src}" alt="hack" width="404px" height="290px"/>
 `;
 }
+
+const h = new Image();
+h.src = '/hackday/h.png';
 
 const code = () => encrypt(String(Date.now()).slice(0, -1));
 
