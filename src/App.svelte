@@ -73,7 +73,7 @@
 	<br/>
 	<Typewriter>Проспект Александровской Фермы 8</Typewriter>
 	<div class="address">
-		<Typewriter>7 парадная, 22 этаж, Квартира 1268</Typewriter>
+		<Typewriter>7 парадная, 22 этаж, кв. 1268</Typewriter>
 	</div>
 	<br/>
 	<Links/>
