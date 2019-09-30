@@ -1,6 +1,7 @@
 
 import bin from './bin.js';
 import {final} from '../../ost';
+import garbage from './garbage';
 
 const print = (content) => `
 ${content}
@@ -14,7 +15,7 @@ export default function read(name, bash_history) {
         return print(bash_history.map(({command}) => command).join('\n'));
     } else if (name === 'garbage') {
         final.play();
-        return print('cool');
+        return garbage();
     } else {
         return print(bin(name));
     }
@@ -104,7 +105,7 @@ fi`,
    ключ, чтобы подключиться.
 
    На Гибсоне могли остаться следы
-   махинаций The Plague. Нужно отыскать
+   махинаций the Plague. Нужно отыскать
    их, чтобы вытащить Джоя.
 
    Возможно the Plague пытался замести
