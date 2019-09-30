@@ -6,6 +6,8 @@ import { createEventDispatcher } from 'svelte';
 
 import {start} from './ost.js';
 
+const hackStart = new Date('2019-10-01T17:00:00.000Z');
+
 const dispatch = createEventDispatcher();
 
 function execDone() {
@@ -110,7 +112,7 @@ input:not(:placeholder-shown) + .prompt {
 }
 </style>
 <section class="terminal">
-    {#if window.location.search === '?beta'}
+    {#if window.location.search === '?beta' || Date.now() > hackStart}
     {#each bash_history as {command, result}}
         <div class="row">> {command}</div>
         {#await result}> <Await/>{:then message}
