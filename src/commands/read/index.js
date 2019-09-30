@@ -129,7 +129,7 @@ PS: Я уже заказал столик. Встречаемся в восем�
 
 -------------
 Юджин Белфорд
-Руководитель службы безопасности
+Руководитель службы информационной безопасности
 `,
     'КвартальныйОтчет.mlm': `RE: Квартальный отчет
 
@@ -161,5 +161,30 @@ PS: Я уже заказал столик. Встречаемся в восем�
 Генри Дорсетт Кейс
 Президент группы компаний
 Ellingson Mineral Company
+`,
+    'FontAwesome.mlm': `Turn it up to eleven with Font Awesome 5.11
+
+Font Awesome version 5.11 is here, and it's ready to rock!
+
+Our latest update to Font Awesome includes a selection of music and tech-related icons.
+We've added everything from instruments (like an electric guitar and trumpet) to vintage items.
+So grab your new fa-boombox and crank up Peter Gabriel's "In Your Eyes", because these icons are about to get awesome.
+
+P.S. If you missed it, we have now have a selection of Font Awesome t-shirts available for sale!
+
+-------------
+Font Awesome
+307 S. Main St. 
+Bentonville, AR 72712, USA
+`,
+    'Пароль.mlm': `Смена пароля
+
+Юджин, это снова началось! Вчера мне опять всю почту завалило требованиями сменить пароль.
+
+Я меняла пароль месяц назад. Сколько можно?! Сделай что-нибудь с этим!
+
+-------------
+Лорен Мерфи
+Руководитель коммерческого департамента
 `
 }

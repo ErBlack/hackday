@@ -76,6 +76,19 @@ export const plague = clone();
 plague.home.contents.plague = {
     type: 'directory',
     contents: {
+        mail: {
+            type: 'directory',
+            contents: {
+                'FontAwesome.mlm': {
+                    type: 'file',
+                    size: 112
+                },
+                'Пароль.mlm': {
+                    type: 'file',
+                    size: 150
+                }
+            }
+        },
         ssh: {
             type: 'directory',
             contents: {
