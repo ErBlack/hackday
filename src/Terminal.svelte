@@ -25,12 +25,12 @@ function onInput(e) {
 
     {
         if (v[0] !== 'h') {
-            e.target.value = '';
+            e.target.value = v[0] === 'р' ? 'h' : '';
         } else if (v[1] !== 'a') {
-            e.target.value = 'h';
+            e.target.value = v[1] === 'ф' ? 'ha' : 'h';
         } else if (v[2] !== 'c') {
-            e.target.value = 'ha';
-        } else if (v[3] !== 'k') {
+            e.target.value = v[2] === 'с' ? 'hac' : 'ha';
+        } else if (v[3] !== 'k' && v[3] !== 'л') {
             e.target.value = 'hac';
         } else {
             e.target.value = '';
