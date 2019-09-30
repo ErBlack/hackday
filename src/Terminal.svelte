@@ -21,7 +21,7 @@ let unlocked = false;
 function onInput(e) {
     if (unlocked) return;
 
-    const v = e.target.value;
+    const v = e.target.value.toLowerCase();
 
     {
         if (v[0] !== 'h') {
