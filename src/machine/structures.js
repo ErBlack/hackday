@@ -38,6 +38,14 @@ lauren.home.contents.lauren = {
         mail: {
             type: 'directory',
             contents: {
+                'КвартальныйОтчет.mlm': {
+                    type: 'file',
+                    size: 112
+                },
+                'СделкаСКитаем.mlm': {
+                    type: 'file',
+                    size: 268
+                },
                 'СменаПароля.mlm': {
                     type: 'file',
                     size: 150
