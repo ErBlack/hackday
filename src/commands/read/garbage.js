@@ -11,7 +11,8 @@ export default function garbage() {
 Ты нашел доказательства.
 Но ты не был первым.
 
-Взломано 01.10.2019, 20:44:32 @hackerteam
+Взломано за 44 минуты и 32 секунды
+01.10.2019, 20:44:32 @hackerteam
 
 <img src="${h.src}" alt="hack" width="404px" height="290px"/>
 `;
