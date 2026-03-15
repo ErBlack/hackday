@@ -1,9 +1,7 @@
 <script>
-    import Timer from './Timer.svelte';
 	import Hello from './Hello.svelte';
 	import Typewriter from './Typewriter.svelte';
-	import Links from './Links.svelte';
-	import Twitter from './Twitter.svelte';
+	import Credentials from './Credentials.svelte';
 	import Copyright from './Copyright.svelte';
 	import Terminal from './Terminal.svelte';
 	import { onMount } from 'svelte';
@@ -19,11 +17,14 @@
 			setTimeout(() => ribbon.scrollTop = ribbon.scrollHeight, 0)
 		}
 	}
-
-	const start = new Date('2019-10-12T11:00:00.000Z');
 </script>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap&subset=cyrillic" rel="stylesheet">
 <style>
+	:global(html) {
+		height: 100%;
+		width: 100%;
+	}
+
 	:global(body) {
 		font-family: 'Roboto Mono', monospace;
 		color: #14fd7e;
@@ -40,10 +41,7 @@
 	text-shadow: 0 0.1em 0rem rgba(0,0,0,0.4), 0 0 2em rgba(0,0,0,0.8);
 	min-width: 500px;
 	min-height: 100%;
-	}
-	.address {
-		line-height: 1em;
-		font-size: .75em;
+    box-sizing: border-box;
 	}
 	.ribbon {
 		top: 1em;
@@ -66,21 +64,10 @@
 </style>
 <div class="ribbon">
 	<Hello/>
-	<Typewriter>Приглашаю на день рождения</Typewriter>
-	<Typewriter>{start.toLocaleString().slice(0, -3)}</Typewriter>
-	<Typewriter>Приходите через</Typewriter>
-	<Typewriter><Timer start={start}/></Typewriter>
-	<br/>
-	<Typewriter>Проспект Александровской Фермы 8</Typewriter>
-	<div class="address">
-		<Typewriter>7 парадная, 22 этаж, кв. 1268</Typewriter>
-	</div>
-	<br/>
-	<Links/>
-	<br/>
+	<Typewriter>Wake up...</Typewriter>
 	<Terminal on:exec={onExec}/>
 	<footer>
-		<Twitter/>
+		<Credentials/>
 		<Copyright/>
 	</footer>
 </div>

@@ -124,7 +124,7 @@ input:not(:placeholder-shown) + .prompt {
         {/await}
     {/each}
     <form class={readonly ? 'readonly' : ''} on:submit={onSubmit}>
-        <input name="command" placeholder=" " on:input={onInput} {readonly}>
+        <input name="command" placeholder=" " autocomplete="false" on:input={onInput} {readonly}>
         <span class="prompt">></span>
     </form>
     {/if}

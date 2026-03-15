@@ -1,4 +1,4 @@
-import structure from './structure';
+import structure from './structure.json';
 
 const clone = () => JSON.parse(JSON.stringify(structure));
 

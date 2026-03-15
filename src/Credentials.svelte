@@ -11,6 +11,6 @@
 		margin-left: -1.6em;
 	}
 </style>
-<a href="https://twitter.com/ErBlack">
+<a href="/">
 	<Typewriter>@ErBlack</Typewriter>
 </a>

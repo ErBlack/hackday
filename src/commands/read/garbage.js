@@ -20,15 +20,3 @@ export default function garbage() {
 
 const h = new Image();
 h.src = '/hackday/h.png';
-
-const code = () => encrypt(String(Date.now()).slice(0, -1));
-
-function encrypt(string) {
-    return string
-        .split('')
-        .map((letter, i) => {
-            return String.fromCharCode(letter.charCodeAt(0) + 16 + i) +
-                ((i === string.length - 1) || (i + 1) % 4 ? '' : '-');
-        })
-        .join('');
-}

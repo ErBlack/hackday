@@ -68,7 +68,7 @@ const machines = {
     }
 }
 
-export const currentMachine = () => machines[current];
+const currentMachine = () => machines[current];
 export const currentDir = () => currentMachine().dir;
 export const currentStructure = () => currentMachine().structure; 
 
